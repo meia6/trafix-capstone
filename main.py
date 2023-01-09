@@ -10,7 +10,8 @@ from camera import camera_init
 # 4. Repeat for all cameras
 # 5. For each camera, take the respective neighboring traffic lights going in the same direction  
 # 6. compare cars with camera corresponding to same direction
-# 7. 
+# 7. if needed (either max hold time exceeded or certain direction has more traffic), switch lights accordingly
+# 8. repeat from step 3
 
 def __main__():
 

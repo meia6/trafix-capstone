@@ -20,5 +20,4 @@ def traffic_init(speed_limit, distances, max_hold_time, min_hold_time):
                 intersection.change_color()
             # elif(intersection.compare_ns_ew() == True):  # check if NS direction has more cars than EW direction
             elif not (intersection.get_hold_time() < min_hold_time):
-                if(intersection.compare_ns_ew() == True):
-
+                intersection.light_transition()

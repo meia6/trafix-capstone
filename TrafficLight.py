@@ -13,6 +13,7 @@ class TrafficLight:
             self.set_red
         elif(self.status == "red"):
             self.set_green
+        self.send_status()
 
     def set_green(self):
         self.status = "green"
@@ -34,3 +35,6 @@ class TrafficLight:
     
     def get_cars(self):
         return self.cars
+
+    def send_status(self):  # send current status to microcontroller to display lights
+        return self.status

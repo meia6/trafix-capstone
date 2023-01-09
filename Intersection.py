@@ -12,7 +12,9 @@ class Intersection:
         return False
 
     def light_transition(self):
-
+        if(self.compare_ns_ew() & self.lightNS == "Green"):
+            return
+            
         if(self.lightNS.status == "Green"):
             self.lightNS.set_yellow()
             # wait for ~3 seconds, to be implemented
