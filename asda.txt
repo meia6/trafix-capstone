@@ -1,7 +1,0 @@
-record object detection for 4 directions
-
-what intersection
-direction
-how many cars
-
-just follow the diagram
