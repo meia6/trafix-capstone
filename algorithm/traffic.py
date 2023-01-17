@@ -5,7 +5,7 @@ from time import gmtime
 
 def traffic_init(speed_limit, distances, max_hold_time, min_hold_time):
 
-    start_time = gmtime()
+    start_time = gmtime()  # to be used later
 
     intersections = [
         Intersection(TrafficLight("green"), TrafficLight("red"), start_time),
@@ -18,6 +18,5 @@ def traffic_init(speed_limit, distances, max_hold_time, min_hold_time):
 
             if(intersection.get_hold_time() > max_hold_time):  # if max light hold time is reached, swap unconditionally
                 intersection.change_color()
-            # elif(intersection.compare_ns_ew() == True):  # check if NS direction has more cars than EW direction
             elif not (intersection.get_hold_time() < min_hold_time):
-                intersection.light_transition()
+                intersection.process_light()

@@ -1,7 +1,6 @@
 # Controls communication with Arduino carrying the camera
 
-# import openCV stuff
+# import YoloV4/OpenCV stuff
 
 def camera_init():
-    # get each camera
     return
