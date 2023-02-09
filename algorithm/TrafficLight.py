@@ -1,23 +1,28 @@
 # Each intersection contains two traffic lights, but for now only one "traffic"
 
-from time import cmtime
+import time
 
 class TrafficLight:
-    def __init__(self, start_color):
+    def __init__(self, start_color, congestion_counts, congestion_timings):
         self.status = start_color
         self.hold_time = 0
-        cars = 0
-    
-    def change_color(self):  # yellow lights will be considered at a later stage
-        if(self.status == "green"):
-            self.set_red
-        elif(self.status == "red"):
-            self.set_green
-        self.send_status()
+        self.crosswalk_request = False  # true when a crosswalk request is pending (button is pressed)
+        self.crosswalk_status = False  # true when pedestrian may cross
+        self.congestion_counts = congestion_counts
+        self.congestion_timings = congestion_timings
 
-    def set_green(self):
+        if (len(congestion_counts) != len(congestion_timings)):
+            print("Warning: congestion levels and timings array length differ")
+
+    def set_green(self, target_duration):
         self.status = "green"
         self.hold_time = 0
+        self.target_duration = target_duration
+        self.green_start_time = time.gmtime()
+
+        if (self.crosswalk_request):
+            self.crosswalk_status = True
+            self.crosswalk_request = False
     
     def set_yellow(self):
         self.status = "yellow"
@@ -26,15 +31,26 @@ class TrafficLight:
     def set_red(self):
         self.status = "red"
         self.hold_time = 0
-
-    def set_car_count(self, count):
-        self.cars = count
     
     def get_hold_time(self):
-        return self
+        return self.hold_time
     
-    def get_cars(self):
-        return self.cars
-
+    def get_status(self):
+        return self.status
+    
     def send_status(self):  # send current status to microcontroller to display lights
         return self.status
+    
+    def crosswalk_pressed(self):
+        self.crosswalk_request = True
+
+    def get_congestion(self):
+        for i in reversed(range(len(self.congestion_counts))):  # ~3 or 4 congestion levels max
+            if (self.count_cars >= self.congestion_counts[i]):
+                return i + 1
+
+    def count_cars(self):  # intake arduino output thing and return it
+        return 0
+    
+    def check_time(self):
+        if()
