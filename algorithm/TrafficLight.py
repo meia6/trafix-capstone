@@ -1,56 +1,52 @@
-# Each intersection contains two traffic lights, but for now only one "traffic"
-
-import time
+import Street
 
 class TrafficLight:
-    def __init__(self, start_color, congestion_counts, congestion_timings):
-        self.status = start_color
-        self.hold_time = 0
-        self.crosswalk_request = False  # true when a crosswalk request is pending (button is pressed)
-        self.crosswalk_status = False  # true when pedestrian may cross
-        self.congestion_counts = congestion_counts
-        self.congestion_timings = congestion_timings
-
-        if (len(congestion_counts) != len(congestion_timings)):
-            print("Warning: congestion levels and timings array length differ")
-
-    def set_green(self, target_duration):
-        self.status = "green"
-        self.hold_time = 0
-        self.target_duration = target_duration
-        self.green_start_time = time.gmtime()
-
-        if (self.crosswalk_request):
-            self.crosswalk_status = True
-            self.crosswalk_request = False
-    
-    def set_yellow(self):
-        self.status = "yellow"
-        self.hold_time = 0
-    
-    def set_red(self):
-        self.status = "red"
-        self.hold_time = 0
-    
-    def get_hold_time(self):
-        return self.hold_time
-    
+    def __init__(self, name, street, redlight_min, crosswalk_min, greenlight_max, camera):
+        self.name = name
+        self.street = street
+        self.min_time = redlight_min
+        self.max_time = greenlight_max
+        self.min_crosswalk = crosswalk_min
+        self.crosswalk_status = False
+        self.crosswalk_request = False
+        self.status = False  # false = red, green = true
+        self.camera = camera
+		
+    def set_cross_status(self, status):
+        self.crosswalk_status = status
+		
+    def set_cross_request(self, request):
+        self.crosswalk_request = request
+		
+    def set_mintime(self, min):
+        self.min_time = min
+	
+    def set_maxtime(self, max):
+        self.max_time = max
+		
+    def set_mincrosswalk(self, min_cross):
+        self.min_crosswalk = min_cross
+		
+    def set_status(self, newStatus):
+        self.status = newStatus
+		
+    def set_street(self, newStreet):
+        self.set_street = newStreet
+		
+    def change_name(self, newName):
+        self.name = newName
+	
     def get_status(self):
         return self.status
     
-    def send_status(self):  # send current status to microcontroller to display lights
+    def send_status(self):  # send current color to microcontroller to display lights
         return self.status
     
     def crosswalk_pressed(self):
         self.crosswalk_request = True
 
-    def get_congestion(self):
-        for i in reversed(range(len(self.congestion_counts))):  # ~3 or 4 congestion levels max
-            if (self.count_cars >= self.congestion_counts[i]):
-                return i + 1
-
-    def count_cars(self):  # intake arduino output thing and return it
-        return 0
+    def set_camera(self, camera):
+        self.camera = camera
     
-    def check_time(self):
-        if()
+    def get_camera(self, camera):
+        return self.camera
