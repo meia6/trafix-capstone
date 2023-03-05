@@ -21,7 +21,9 @@ def traffic_init(speed_limit, distances, max_hold_time, min_hold_time, ped_min_h
     program_running = True
 
     intersections = []
-
+    selector=0
+    runtime=0
+    prevlight_runtime=0
     while(program_running):
         for intersection in intersections:  # there will be 2 - 3 intersections max
             camera_counts = []
@@ -37,15 +39,146 @@ def traffic_init(speed_limit, distances, max_hold_time, min_hold_time, ped_min_h
             threshold_EW=2
             ratio_NS = (camera_counts[0] + camera_counts[2]) /  threshold_NS #ex. if ratio=1, base traffic congestion. call light_time_length[1].
             ratio_EW = (camera_counts[1] + camera_counts[3]) / threshold_EW #if ratio=2, 2nd level of traffic congestion. call light_time_length[2].
-        #light_time_length=[60,120,180,240,300]/1,2,3,4,5 mins
-        #min_time_light= [10,20,30,40,50,60]
-        #if runtime-prevlight_time>light_time_length[], run code. If not, pass. (use try except blocks?)
-            if ratio_NS>ratio_EW==True:
-                #do light switch if its red.
-                #switch ratio_NS, each case will send the corresponding time for the lights
+            light_time_length=[60,120,180,240,300]#1,2,3,4,5 mins
+            min_time_light= [10,20,30,40,50,60]
+
+            #if statement to decide congestion level (might be redundant based on ratio_NS>ratio_EW nested if statement)
+            if ratio_NS > ratio_EW:
+                time_selector=ratio_NS
             else:
-                #do light switch if its red (if statement)
-                #switch ratio_EW, each case will send the corresponding time for the lights
+                time_selector=ratio_EW
+
+        #if statement to check what congestion response is needed
+            if time_selector==0:
+                #another if statement to see if previous lights have done their time
+                if runtime-prevlight_runtime>light_time_length[prev_time_selector]:
+                    #if statement for ratio comparison 
+                    if ratio_NS>ratio_EW==True:
+                        #switch ratio_NS, if statement for red light or green
+                        if traffic_light == "red":
+                            prevlight_runtime=runtime
+                            #extend lights on red
+                            prev_time_selector=ratio_NS
+                            light_time_length[ratio_NS] #call this extra?
+                        else:
+                            prevlight_runtime=runtime
+                            #switch lights to red
+                            prev_time_selector=ratio_NS
+                            light_time_length[ratio_NS]
+                    else:
+                        if traffic_light == "red":
+                            prevlight_runtime=runtime
+                            #extend lights on red
+                            prev_time_selector=ratio_NS
+                            light_time_length[ratio_NS] #call this extra?
+                        else:
+                            prevlight_runtime=runtime
+                            #switch lights to red
+                            prev_time_selector=ratio_NS
+                            light_time_length[ratio_NS]
+                else:
+                    pass
+            elif time_selector==1:
+                #another if statement to see if previous lights have done their time
+                if runtime-prevlight_runtime>light_time_length[prev_time_selector]:
+                    #if statement for ratio comparison 
+                    if ratio_NS>ratio_EW==True:
+                        #switch ratio_NS, if statement for red light or green
+                        if traffic_light == "red":
+                            prevlight_runtime=runtime
+                            #extend lights on red
+                            prev_time_selector=ratio_NS
+                            light_time_length[ratio_NS] #call this extra?
+                        else:
+                            prevlight_runtime=runtime
+                            #switch lights to red
+                            prev_time_selector=ratio_NS
+                            light_time_length[ratio_NS]
+                    else:
+                        if traffic_light == "red":
+                            prevlight_runtime=runtime
+                            #extend lights on red
+                            prev_time_selector=ratio_NS
+                            light_time_length[ratio_NS] #call this extra?
+                        else:
+                            prevlight_runtime=runtime
+                            #switch lights to red
+                            prev_time_selector=ratio_NS
+                            light_time_length[ratio_NS]
+                else:
+                    pass
+            elif time_selector==2:
+                #another if statement to see if previous lights have done their time
+                if runtime-prevlight_runtime>light_time_length[prev_time_selector]:
+                    #if statement for ratio comparison 
+                    if ratio_NS>ratio_EW==True:
+                        #switch ratio_NS, if statement for red light or green
+                        if traffic_light == "red":
+                            prevlight_runtime=runtime
+                            #extend lights on red
+                            prev_time_selector=ratio_NS
+                            light_time_length[ratio_NS] #call this extra?
+                        else:
+                            prevlight_runtime=runtime
+                            #switch lights to red
+                            prev_time_selector=ratio_NS
+                            light_time_length[ratio_NS]
+                    else:
+                        if traffic_light == "red":
+                            prevlight_runtime=runtime
+                            #extend lights on red
+                            prev_time_selector=ratio_NS
+                            light_time_length[ratio_NS] #call this extra?
+                        else:
+                            prevlight_runtime=runtime
+                            #switch lights to red
+                            prev_time_selector=ratio_NS
+                            light_time_length[ratio_NS]
+                else:
+                    pass
+            elif time_selector==3:
+                #another if statement to see if previous lights have done their time
+                if runtime-prevlight_runtime>light_time_length[prev_time_selector]:
+                    #if statement for ratio comparison 
+                    if ratio_NS>ratio_EW==True:
+                        #switch ratio_NS, if statement for red light or green
+                        if traffic_light == "red":
+                            prevlight_runtime=runtime
+                            #extend lights on red
+                            prev_time_selector=ratio_NS
+                            light_time_length[ratio_NS] #call this extra?
+                        else:
+                            prevlight_runtime=runtime
+                            #switch lights to red
+                            prev_time_selector=ratio_NS
+                            light_time_length[ratio_NS]
+                    else:
+                        if traffic_light == "red":
+                            prevlight_runtime=runtime
+                            #extend lights on red
+                            prev_time_selector=ratio_NS
+                            light_time_length[ratio_NS] #call this extra?
+                        else:
+                            prevlight_runtime=runtime
+                            #switch lights to red
+                            prev_time_selector=ratio_NS
+                            light_time_length[ratio_NS]
+                else:
+                    pass
+            elif time_selector==4:
+                #keep this code just in case above statements are brick, reset point
+                if runtime-prevlight_runtime>light_time_length[prev_time_selector]:
+                    if ratio_NS>ratio_EW==True:
+                        prevlight_runtime=runtime
+                        #do light switch if its red.
+                        #switch ratio_NS, each case will send the corresponding time for the lights
+                    else:
+                        hi=0#do light switch if its red (if statement)
+                        #switch ratio_EW, each case will send the corresponding time for the lights
+                else:
+                    pass
+
+
              
 
     
