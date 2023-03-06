@@ -1,0 +1,18 @@
+so far in this algo_test.py code, we use a fixed case of ratio_NS always being larger than ratio_EW.
+since ratio_NS calculates to 2.5, the .ceil function rounds it to 3, and that is our time selector.
+in the first if statement, time_selector==3. the next if statement checks for max_time, which is our boolean variable used
+for streets that had their time extended. since max_time=false as initial case, move to else.
+
+The third if statement compares the time the light has been on for vs how long it should be on for. 
+When the light is on longer than how long it should be on for, switch the lights. if not, pass to continue on.
+we had prev_time_selector set to 5, which in the arrays of light_time_switch will be 0 for our initial case.
+runtime iterated +1, so runtime-prevlight_runtime>light_time_length[prev_time_selector] (1-0>0)
+
+traffic light was set to green in initial case, meaning it has been on before, and still has the prioritized congestion.
+so we set the prev_time_selector to 3, and set max_time to true to run this NS street once more.
+
+the next time a condition is met, is when the light has been on longer than how long it should be on for + the additional max time.
+Now, switch the lights green for EW street, set the timer according to it's condition(can use min_time here perhaps?), turn max_time=false.
+
+The next time the conditionals are met is 20 seconds after, since NS is still more congested, time_selector=3.
+(this should actually trigger the else statement)
