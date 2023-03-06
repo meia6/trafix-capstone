@@ -16,3 +16,13 @@ Now, switch the lights green for EW street, set the timer according to it's cond
 
 The next time the conditionals are met is 20 seconds after, since NS is still more congested, time_selector=3.
 (this should actually trigger the else statement)
+
+TODO/GOALS:
+real clock timer while camera input runs (look at dn4/dk4)
+    -to this point, see if camera input works with timer
+pyserial write in to arduino
+rewrite code to fit into algorithm
+    -i.e., rewrite variables with their class counterparts
+    -inclusion of multiple intersections
+
+should probably add error exception handling/breaks
