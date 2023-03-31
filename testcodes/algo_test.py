@@ -93,7 +93,42 @@ while(program_running):
                     print("length of light: {}".format(light_time_length[prev_time_selector]))
             else:
                 #send # of car 
-                pass
+                #pass
+                
+                #if statement to ensure that a green-lit direction's ratio will be compared with the ratio that set the green light.
+                if traffic_light_NS == "green":
+                    light_advance = math.ceil(ratio_NS)-1
+                    #conditionals to check level of traffic. if ==0 means its still heavy traffic, elif ==1 then current traffic is lower by 1 level, runtime increases by an additional +1 to speed up the green light
+                    if prev_time_selector - light_advance==0:
+                        pass
+                    elif prev_time_selector - light_advance==1:
+                        runtime +=1
+                    elif prev_time_selector - light_advance==2:
+                        runtime +=2
+                    elif prev_time_selector - light_advance==3:
+                        runtime +=3
+                    elif prev_time_selector - light_advance==4:
+                        runtime +=4
+                    elif prev_time_selector - light_advance==5:
+                        runtime +=5
+                    elif prev_time_selector - light_advance==6:
+                        runtime +=6
+                elif traffic_light_NS == "green":
+                    light_advance = math.ceil(ratio_EW)-1
+                    if prev_time_selector - light_advance==0:
+                        pass
+                    elif prev_time_selector - light_advance==1:
+                        runtime +=1
+                    elif prev_time_selector - light_advance==2:
+                        runtime +=2
+                    elif prev_time_selector - light_advance==3:
+                        runtime +=3
+                    elif prev_time_selector - light_advance==4:
+                        runtime +=4
+                    elif prev_time_selector - light_advance==5:
+                        runtime +=5
+                    elif prev_time_selector - light_advance==6:
+                        runtime +=6
         else:
             #another if statement to see if previous lights have done their time
             if runtime-prevlight_runtime>light_time_length[prev_time_selector]:
@@ -146,7 +181,42 @@ while(program_running):
                         print("ratio_EW: {}".format(ratio_EW))
                         print("length of light: {}".format(light_time_length[prev_time_selector]))
             else:
-                pass
+                #send # of car 
+                #pass
+                #if statement to ensure that a green-lit direction's ratio will be compared with the ratio that set the green light.
+                if traffic_light_NS == "green":
+                    light_advance = math.ceil(ratio_NS)-1
+                    #conditionals to check level of traffic. if ==0 means its still heavy traffic, elif ==1 then current traffic is lower by 1 level, runtime increases by an additional +1 to speed up the green light
+                    if prev_time_selector - light_advance==0:
+                        pass
+                    elif prev_time_selector - light_advance==1:
+                        runtime +=1
+                    elif prev_time_selector - light_advance==2:
+                        runtime +=2
+                    elif prev_time_selector - light_advance==3:
+                        runtime +=3
+                    elif prev_time_selector - light_advance==4:
+                        runtime +=4
+                    elif prev_time_selector - light_advance==5:
+                        runtime +=5
+                    elif prev_time_selector - light_advance==6:
+                        runtime +=6
+                elif traffic_light_NS == "green":
+                    light_advance = math.ceil(ratio_EW)-1
+                    if prev_time_selector - light_advance==0:
+                        pass
+                    elif prev_time_selector - light_advance==1:
+                        runtime +=1
+                    elif prev_time_selector - light_advance==2:
+                        runtime +=2
+                    elif prev_time_selector - light_advance==3:
+                        runtime +=3
+                    elif prev_time_selector - light_advance==4:
+                        runtime +=4
+                    elif prev_time_selector - light_advance==5:
+                        runtime +=5
+                    elif prev_time_selector - light_advance==6:
+                        runtime +=6
     elif (time_selector-1)==1:
         #if statement to see if lights were previously green and thus, extended
         if max_time==True:
@@ -184,7 +254,41 @@ while(program_running):
                     print("length of light: {}".format(light_time_length[prev_time_selector]))
             else:
                 #send # of car 
-                pass
+                #pass
+                #if statement to ensure that a green-lit direction's ratio will be compared with the ratio that set the green light.
+                if traffic_light_NS == "green":
+                    light_advance = math.ceil(ratio_NS)-1
+                    #conditionals to check level of traffic. if ==0 means its still heavy traffic, elif ==1 then current traffic is lower by 1 level, runtime increases by an additional +1 to speed up the green light
+                    if prev_time_selector - light_advance==0:
+                        pass
+                    elif prev_time_selector - light_advance==1:
+                        runtime +=1
+                    elif prev_time_selector - light_advance==2:
+                        runtime +=2
+                    elif prev_time_selector - light_advance==3:
+                        runtime +=3
+                    elif prev_time_selector - light_advance==4:
+                        runtime +=4
+                    elif prev_time_selector - light_advance==5:
+                        runtime +=5
+                    elif prev_time_selector - light_advance==6:
+                        runtime +=6
+                elif traffic_light_NS == "green":
+                    light_advance = math.ceil(ratio_EW)-1
+                    if prev_time_selector - light_advance==0:
+                        pass
+                    elif prev_time_selector - light_advance==1:
+                        runtime +=1
+                    elif prev_time_selector - light_advance==2:
+                        runtime +=2
+                    elif prev_time_selector - light_advance==3:
+                        runtime +=3
+                    elif prev_time_selector - light_advance==4:
+                        runtime +=4
+                    elif prev_time_selector - light_advance==5:
+                        runtime +=5
+                    elif prev_time_selector - light_advance==6:
+                        runtime +=6
         else:
             #another if statement to see if previous lights have done their time
             if runtime-prevlight_runtime>light_time_length[prev_time_selector]:
@@ -237,7 +341,42 @@ while(program_running):
                         print("ratio_EW: {}".format(ratio_EW))
                         print("length of light: {}".format(light_time_length[prev_time_selector]))
             else:
-                pass
+                #send # of car 
+                #pass
+                #if statement to ensure that a green-lit direction's ratio will be compared with the ratio that set the green light.
+                if traffic_light_NS == "green":
+                    light_advance = math.ceil(ratio_NS)-1
+                    #conditionals to check level of traffic. if ==0 means its still heavy traffic, elif ==1 then current traffic is lower by 1 level, runtime increases by an additional +1 to speed up the green light
+                    if prev_time_selector - light_advance==0:
+                        pass
+                    elif prev_time_selector - light_advance==1:
+                        runtime +=1
+                    elif prev_time_selector - light_advance==2:
+                        runtime +=2
+                    elif prev_time_selector - light_advance==3:
+                        runtime +=3
+                    elif prev_time_selector - light_advance==4:
+                        runtime +=4
+                    elif prev_time_selector - light_advance==5:
+                        runtime +=5
+                    elif prev_time_selector - light_advance==6:
+                        runtime +=6
+                elif traffic_light_NS == "green":
+                    light_advance = math.ceil(ratio_EW)-1
+                    if prev_time_selector - light_advance==0:
+                        pass
+                    elif prev_time_selector - light_advance==1:
+                        runtime +=1
+                    elif prev_time_selector - light_advance==2:
+                        runtime +=2
+                    elif prev_time_selector - light_advance==3:
+                        runtime +=3
+                    elif prev_time_selector - light_advance==4:
+                        runtime +=4
+                    elif prev_time_selector - light_advance==5:
+                        runtime +=5
+                    elif prev_time_selector - light_advance==6:
+                        runtime +=6
     elif (time_selector-1)==2:
         #if statement to see if lights were previously green and thus, extended
         if max_time==True:
@@ -275,7 +414,41 @@ while(program_running):
                     print("length of light: {}".format(light_time_length[prev_time_selector]))
             else:
                 #send # of car 
-                pass
+                #pass
+                #if statement to ensure that a green-lit direction's ratio will be compared with the ratio that set the green light.
+                if traffic_light_NS == "green":
+                    light_advance = math.ceil(ratio_NS)-1
+                    #conditionals to check level of traffic. if ==0 means its still heavy traffic, elif ==1 then current traffic is lower by 1 level, runtime increases by an additional +1 to speed up the green light
+                    if prev_time_selector - light_advance==0:
+                        pass
+                    elif prev_time_selector - light_advance==1:
+                        runtime +=1
+                    elif prev_time_selector - light_advance==2:
+                        runtime +=2
+                    elif prev_time_selector - light_advance==3:
+                        runtime +=3
+                    elif prev_time_selector - light_advance==4:
+                        runtime +=4
+                    elif prev_time_selector - light_advance==5:
+                        runtime +=5
+                    elif prev_time_selector - light_advance==6:
+                        runtime +=6
+                elif traffic_light_NS == "green":
+                    light_advance = math.ceil(ratio_EW)-1
+                    if prev_time_selector - light_advance==0:
+                        pass
+                    elif prev_time_selector - light_advance==1:
+                        runtime +=1
+                    elif prev_time_selector - light_advance==2:
+                        runtime +=2
+                    elif prev_time_selector - light_advance==3:
+                        runtime +=3
+                    elif prev_time_selector - light_advance==4:
+                        runtime +=4
+                    elif prev_time_selector - light_advance==5:
+                        runtime +=5
+                    elif prev_time_selector - light_advance==6:
+                        runtime +=6
         else:
             #another if statement to see if previous lights have done their time
             if runtime-prevlight_runtime>light_time_length[prev_time_selector]:
@@ -328,7 +501,42 @@ while(program_running):
                         print("ratio_EW: {}".format(ratio_EW))
                         print("length of light: {}".format(light_time_length[prev_time_selector]))
             else:
-                pass
+                #send # of car 
+                #pass
+                #if statement to ensure that a green-lit direction's ratio will be compared with the ratio that set the green light.
+                if traffic_light_NS == "green":
+                    light_advance = math.ceil(ratio_NS)-1
+                    #conditionals to check level of traffic. if ==0 means its still heavy traffic, elif ==1 then current traffic is lower by 1 level, runtime increases by an additional +1 to speed up the green light
+                    if prev_time_selector - light_advance==0:
+                        pass
+                    elif prev_time_selector - light_advance==1:
+                        runtime +=1
+                    elif prev_time_selector - light_advance==2:
+                        runtime +=2
+                    elif prev_time_selector - light_advance==3:
+                        runtime +=3
+                    elif prev_time_selector - light_advance==4:
+                        runtime +=4
+                    elif prev_time_selector - light_advance==5:
+                        runtime +=5
+                    elif prev_time_selector - light_advance==6:
+                        runtime +=6
+                elif traffic_light_NS == "green":
+                    light_advance = math.ceil(ratio_EW)-1
+                    if prev_time_selector - light_advance==0:
+                        pass
+                    elif prev_time_selector - light_advance==1:
+                        runtime +=1
+                    elif prev_time_selector - light_advance==2:
+                        runtime +=2
+                    elif prev_time_selector - light_advance==3:
+                        runtime +=3
+                    elif prev_time_selector - light_advance==4:
+                        runtime +=4
+                    elif prev_time_selector - light_advance==5:
+                        runtime +=5
+                    elif prev_time_selector - light_advance==6:
+                        runtime +=6
     elif (time_selector-1)==3:
         #if statement to see if lights were previously green and thus, extended
         if max_time==True:
@@ -366,7 +574,41 @@ while(program_running):
                     print("length of light: {}".format(light_time_length[prev_time_selector]))
             else:
                 #send # of car 
-                pass
+                #pass
+                #if statement to ensure that a green-lit direction's ratio will be compared with the ratio that set the green light.
+                if traffic_light_NS == "green":
+                    light_advance = math.ceil(ratio_NS)-1
+                    #conditionals to check level of traffic. if ==0 means its still heavy traffic, elif ==1 then current traffic is lower by 1 level, runtime increases by an additional +1 to speed up the green light
+                    if prev_time_selector - light_advance==0:
+                        pass
+                    elif prev_time_selector - light_advance==1:
+                        runtime +=1
+                    elif prev_time_selector - light_advance==2:
+                        runtime +=2
+                    elif prev_time_selector - light_advance==3:
+                        runtime +=3
+                    elif prev_time_selector - light_advance==4:
+                        runtime +=4
+                    elif prev_time_selector - light_advance==5:
+                        runtime +=5
+                    elif prev_time_selector - light_advance==6:
+                        runtime +=6
+                elif traffic_light_NS == "green":
+                    light_advance = math.ceil(ratio_EW)-1
+                    if prev_time_selector - light_advance==0:
+                        pass
+                    elif prev_time_selector - light_advance==1:
+                        runtime +=1
+                    elif prev_time_selector - light_advance==2:
+                        runtime +=2
+                    elif prev_time_selector - light_advance==3:
+                        runtime +=3
+                    elif prev_time_selector - light_advance==4:
+                        runtime +=4
+                    elif prev_time_selector - light_advance==5:
+                        runtime +=5
+                    elif prev_time_selector - light_advance==6:
+                        runtime +=6
         else:
             #another if statement to see if previous lights have done their time
             if runtime-prevlight_runtime>light_time_length[prev_time_selector]:
@@ -419,7 +661,42 @@ while(program_running):
                         print("ratio_EW: {}".format(ratio_EW))
                         print("length of light: {}".format(light_time_length[prev_time_selector]))
             else:
-                pass
+                #send # of car 
+                #pass
+                #if statement to ensure that a green-lit direction's ratio will be compared with the ratio that set the green light.
+                if traffic_light_NS == "green":
+                    light_advance = math.ceil(ratio_NS)-1
+                    #conditionals to check level of traffic. if ==0 means its still heavy traffic, elif ==1 then current traffic is lower by 1 level, runtime increases by an additional +1 to speed up the green light
+                    if prev_time_selector - light_advance==0:
+                        pass
+                    elif prev_time_selector - light_advance==1:
+                        runtime +=1
+                    elif prev_time_selector - light_advance==2:
+                        runtime +=2
+                    elif prev_time_selector - light_advance==3:
+                        runtime +=3
+                    elif prev_time_selector - light_advance==4:
+                        runtime +=4
+                    elif prev_time_selector - light_advance==5:
+                        runtime +=5
+                    elif prev_time_selector - light_advance==6:
+                        runtime +=6
+                elif traffic_light_NS == "green":
+                    light_advance = math.ceil(ratio_EW)-1
+                    if prev_time_selector - light_advance==0:
+                        pass
+                    elif prev_time_selector - light_advance==1:
+                        runtime +=1
+                    elif prev_time_selector - light_advance==2:
+                        runtime +=2
+                    elif prev_time_selector - light_advance==3:
+                        runtime +=3
+                    elif prev_time_selector - light_advance==4:
+                        runtime +=4
+                    elif prev_time_selector - light_advance==5:
+                        runtime +=5
+                    elif prev_time_selector - light_advance==6:
+                        runtime +=6
     elif (time_selector-1)==4:
         #if statement to see if lights were previously green and thus, extended
         if max_time==True:
@@ -457,7 +734,41 @@ while(program_running):
                     print("length of light: {}".format(light_time_length[prev_time_selector]))
             else:
                 #send # of car 
-                pass
+                #pass
+                #if statement to ensure that a green-lit direction's ratio will be compared with the ratio that set the green light.
+                if traffic_light_NS == "green":
+                    light_advance = math.ceil(ratio_NS)-1
+                    #conditionals to check level of traffic. if ==0 means its still heavy traffic, elif ==1 then current traffic is lower by 1 level, runtime increases by an additional +1 to speed up the green light
+                    if prev_time_selector - light_advance==0:
+                        pass
+                    elif prev_time_selector - light_advance==1:
+                        runtime +=1
+                    elif prev_time_selector - light_advance==2:
+                        runtime +=2
+                    elif prev_time_selector - light_advance==3:
+                        runtime +=3
+                    elif prev_time_selector - light_advance==4:
+                        runtime +=4
+                    elif prev_time_selector - light_advance==5:
+                        runtime +=5
+                    elif prev_time_selector - light_advance==6:
+                        runtime +=6
+                elif traffic_light_NS == "green":
+                    light_advance = math.ceil(ratio_EW)-1
+                    if prev_time_selector - light_advance==0:
+                        pass
+                    elif prev_time_selector - light_advance==1:
+                        runtime +=1
+                    elif prev_time_selector - light_advance==2:
+                        runtime +=2
+                    elif prev_time_selector - light_advance==3:
+                        runtime +=3
+                    elif prev_time_selector - light_advance==4:
+                        runtime +=4
+                    elif prev_time_selector - light_advance==5:
+                        runtime +=5
+                    elif prev_time_selector - light_advance==6:
+                        runtime +=6
         else:
             #another if statement to see if previous lights have done their time
             if runtime-prevlight_runtime>light_time_length[prev_time_selector]:
@@ -510,7 +821,42 @@ while(program_running):
                         print("ratio_EW: {}".format(ratio_EW))
                         print("length of light: {}".format(light_time_length[prev_time_selector]))
             else:
-                pass
+                #send # of car 
+                #pass
+                #if statement to ensure that a green-lit direction's ratio will be compared with the ratio that set the green light.
+                if traffic_light_NS == "green":
+                    light_advance = math.ceil(ratio_NS)-1
+                    #conditionals to check level of traffic. if ==0 means its still heavy traffic, elif ==1 then current traffic is lower by 1 level, runtime increases by an additional +1 to speed up the green light
+                    if prev_time_selector - light_advance==0:
+                        pass
+                    elif prev_time_selector - light_advance==1:
+                        runtime +=1
+                    elif prev_time_selector - light_advance==2:
+                        runtime +=2
+                    elif prev_time_selector - light_advance==3:
+                        runtime +=3
+                    elif prev_time_selector - light_advance==4:
+                        runtime +=4
+                    elif prev_time_selector - light_advance==5:
+                        runtime +=5
+                    elif prev_time_selector - light_advance==6:
+                        runtime +=6
+                elif traffic_light_NS == "green":
+                    light_advance = math.ceil(ratio_EW)-1
+                    if prev_time_selector - light_advance==0:
+                        pass
+                    elif prev_time_selector - light_advance==1:
+                        runtime +=1
+                    elif prev_time_selector - light_advance==2:
+                        runtime +=2
+                    elif prev_time_selector - light_advance==3:
+                        runtime +=3
+                    elif prev_time_selector - light_advance==4:
+                        runtime +=4
+                    elif prev_time_selector - light_advance==5:
+                        runtime +=5
+                    elif prev_time_selector - light_advance==6:
+                        runtime +=6
     elif (time_selector-1)==5:
         #if statement to see if lights were previously green and thus, extended
         if max_time==True:
@@ -548,7 +894,41 @@ while(program_running):
                     print("length of light: {}".format(light_time_length[prev_time_selector]))
             else:
                 #send # of car 
-                pass
+                #pass
+                #if statement to ensure that a green-lit direction's ratio will be compared with the ratio that set the green light.
+                if traffic_light_NS == "green":
+                    light_advance = math.ceil(ratio_NS)-1
+                    #conditionals to check level of traffic. if ==0 means its still heavy traffic, elif ==1 then current traffic is lower by 1 level, runtime increases by an additional +1 to speed up the green light
+                    if prev_time_selector - light_advance==0:
+                        pass
+                    elif prev_time_selector - light_advance==1:
+                        runtime +=1
+                    elif prev_time_selector - light_advance==2:
+                        runtime +=2
+                    elif prev_time_selector - light_advance==3:
+                        runtime +=3
+                    elif prev_time_selector - light_advance==4:
+                        runtime +=4
+                    elif prev_time_selector - light_advance==5:
+                        runtime +=5
+                    elif prev_time_selector - light_advance==6:
+                        runtime +=6
+                elif traffic_light_NS == "green":
+                    light_advance = math.ceil(ratio_EW)-1
+                    if prev_time_selector - light_advance==0:
+                        pass
+                    elif prev_time_selector - light_advance==1:
+                        runtime +=1
+                    elif prev_time_selector - light_advance==2:
+                        runtime +=2
+                    elif prev_time_selector - light_advance==3:
+                        runtime +=3
+                    elif prev_time_selector - light_advance==4:
+                        runtime +=4
+                    elif prev_time_selector - light_advance==5:
+                        runtime +=5
+                    elif prev_time_selector - light_advance==6:
+                        runtime +=6
         else:
             #another if statement to see if previous lights have done their time
             if runtime-prevlight_runtime>light_time_length[prev_time_selector]:
@@ -601,4 +981,39 @@ while(program_running):
                         print("ratio_EW: {}".format(ratio_EW))
                         print("length of light: {}".format(light_time_length[prev_time_selector]))
             else:
-                pass
+                #send # of car 
+                #pass
+                #if statement to ensure that a green-lit direction's ratio will be compared with the ratio that set the green light.
+                if traffic_light_NS == "green":
+                    light_advance = math.ceil(ratio_NS)-1
+                    #conditionals to check level of traffic. if ==0 means its still heavy traffic, elif ==1 then current traffic is lower by 1 level, runtime increases by an additional +1 to speed up the green light
+                    if prev_time_selector - light_advance==0:
+                        pass
+                    elif prev_time_selector - light_advance==1:
+                        runtime +=1
+                    elif prev_time_selector - light_advance==2:
+                        runtime +=2
+                    elif prev_time_selector - light_advance==3:
+                        runtime +=3
+                    elif prev_time_selector - light_advance==4:
+                        runtime +=4
+                    elif prev_time_selector - light_advance==5:
+                        runtime +=5
+                    elif prev_time_selector - light_advance==6:
+                        runtime +=6
+                elif traffic_light_NS == "green":
+                    light_advance = math.ceil(ratio_EW)-1
+                    if prev_time_selector - light_advance==0:
+                        pass
+                    elif prev_time_selector - light_advance==1:
+                        runtime +=1
+                    elif prev_time_selector - light_advance==2:
+                        runtime +=2
+                    elif prev_time_selector - light_advance==3:
+                        runtime +=3
+                    elif prev_time_selector - light_advance==4:
+                        runtime +=4
+                    elif prev_time_selector - light_advance==5:
+                        runtime +=5
+                    elif prev_time_selector - light_advance==6:
+                        runtime +=6
