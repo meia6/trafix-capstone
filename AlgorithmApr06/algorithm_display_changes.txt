@@ -1,0 +1,14 @@
+if its a red light, keep the # of cars equal to the previous or larger. 
+-fix 
+
+red light scenario:
+highest # becomes current cars if that is larger than the previous highest count
+if light == red && current > max, max = current
+else, skip (pass)
+
+
+at the end of the red light, set the green light # to the max
+then just start taking input from the video without max.
+max for each direction, set to 1.
+
+DONE

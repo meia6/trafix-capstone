@@ -1,0 +1,18 @@
+algorithm issues & fix:
+DONE
+-max time change needs a fix, if ratio_NS>ratio_EW also needs to check if the last light ns was green.
+--might need new variable, prev_light_state
+
+DONE
+--compares with other direction, still the same dynamic light timings but will change according to how heavy other direction is.
+-for shorter green light algorithm, if traffic light ns is green then light_advance to math.ceil(ratio_EW) - 1..
+
+DONE
+- if prev_time_selector - light_advance == 0, runtime += 6 instead of pass.
+- in other words, inverse the if elif statements for this change.
+
+
+FURTHER CONSIDERATIONS:
+-- is this inversing efficient? 
+-- maybe switching too fast, only speed the light at the halfway mark of the lights?
+-- or shorten the rate at which we speed up the green light times. (instead of +6, only +3)
